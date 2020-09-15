@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create An Account"
+            android:textSize="24dp"
+            android:layout_marginTop="-15dp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/background"
+
+
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="first name (required)"
+                    android:textSize="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <EditText
+                    android:id="@+id/firstNameEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="your first name"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="last name (required)"
+                    android:textSize="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <EditText
+                    android:id="@+id/lastNameEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="your last name"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="email (required)"
+                    android:textSize="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <EditText
+                    android:id="@+id/emailEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:hint="user email"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="password (required)"
+                    android:textSize="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"/>
+
+                <EditText
+                    android:id="@+id/passwordEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:hint="user password"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/createAccountBtn"
+            android:layout_width="270dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Create Accounnt"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:background="@drawable/myroundbutton"
+
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
