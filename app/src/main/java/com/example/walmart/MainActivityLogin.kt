@@ -41,7 +41,7 @@ class MainActivityLogin : AppCompatActivity() {
             val password = passwordEditTxt.text.toString()
             for (user in userList) {
                 if (user.email.equals(userName) && user.password.equals(password)) {
-                    val intent = Intent(this,Registration::class.java)
+                    val intent = Intent(this,Shopping::class.java)
                     intent.putExtra("userName",user.email)
                     startActivity(intent)
                 }

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Registration"></activity>
+        <activity android:name=".MacBookDetailActivity"></activity>
+        <activity android:name=".MacBookActivity" />
+        <activity android:name=".AppleWatch" />
+        <activity android:name=".Registration" />
         <activity android:name=".Shopping" />
         <activity android:name=".MainActivityLogin">
             <intent-filter>
@@ -17,10 +20,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.SENDTO" />
+
                 <data android:scheme="mailto" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

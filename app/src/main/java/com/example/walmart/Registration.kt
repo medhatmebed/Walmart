@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_registration.*
 import java.io.Serializable
 import java.net.URI
@@ -36,7 +37,8 @@ class Registration : AppCompatActivity() {
                 intent.putExtra("newUser",newUser)
                 setResult(Activity.RESULT_OK,intent)
                 finish()
-
+            }else{
+                Toast.makeText(this, "Please fill the required data", Toast.LENGTH_SHORT).show()
             }
         }
     }

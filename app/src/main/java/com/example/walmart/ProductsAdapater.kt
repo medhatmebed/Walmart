@@ -1,7 +1,9 @@
 package com.example.walmart
 
+import android.app.PendingIntent.getActivity
 import android.content.Context
 import android.content.Context.LAYOUT_INFLATER_SERVICE
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +26,11 @@ class ProductsAdapater: BaseAdapter {
         var productView = inflater.inflate(R.layout.cardviewlayout, null)
         productView.imageView.setImageResource(product.image)
         productView.textView.text = product.name
+        if (product.name.equals("Apple Watch") || product.name.equals("MacBook Pro")) {
+            productView.imageView.setOnClickListener{
+                makeSomeIntents(context,product.name)
+            }
+        }
         return productView
 
     }
@@ -39,6 +46,20 @@ class ProductsAdapater: BaseAdapter {
     //return number of cell itiration
     override fun getCount(): Int {
         return productsList.size
+    }
+    //make some intents
+    fun makeSomeIntents(context: Context?,destination : String){
+
+//        val intent = Intent(getActivity(),Shopping::class.java)
+//        intent.putExtra("userName",user.email)
+//        startActivity(intent)
+        if (destination.equals("Apple Watch")){
+            val intent = Intent(context,AppleWatch::class.java)
+            context?.startActivity(intent)
+        }else {
+            val intent = Intent(context,MacBookActivity::class.java)
+            context?.startActivity(intent)
+        }
     }
 
 }
